@@ -1,63 +1,85 @@
-# PhishShield: Advanced Phishing Detection
-### Developed by Sanobar Shaikh
+# 🛡️ PhishShield
+### *Next-Gen Phishing Detection Powered by Machine Learning*
 
-This project is a browser-based phishing detection system implemented as a Chrome Extension that leverages machine learning models to identify and block phishing websites in real-time. It is part of a research initiative focused on enhancing web security through intelligent URL and content-based analysis.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688.svg)](https://fastapi.tiangolo.com/)
 
-**🚀 Features**
+**PhishShield** is a high-performance Chrome Extension designed to protect users from sophisticated phishing attacks in real-time. By combining a lightweight frontend with a robust **XGBoost Machine Learning model**, PhishShield analyzes URL structures and behavioral patterns to stop cyber threats before they reach the user.
 
-  🔍 Real-time detection of phishing URLs while browsing
+---
 
-  🧠 Backend powered by an optimized XGBoost machine learning model with 98.5% accuracy
+## 🚀 Key Features
 
-  📦 Lightweight frontend Chrome extension with clean UI
+- **🧠 Advanced ML Engine:** Powered by an optimized XGBoost model achieving **98.5% accuracy** in detecting malicious patterns.
+- **⚡ Real-Time Protection:** Instant URL analysis as you browse, ensuring seamless security without slowing down your experience.
+- **🛡️ Shadow DOM UI:** A resilient, non-intrusive warning system injected via Shadow DOM to prevent website styles from breaking the security UI.
+- **🔍 Typosquatting Detection:** Built-in Levenshtein algorithms to detect "look-alike" domains (e.g., `googIe.com` vs `google.com`).
+- **🔐 Privacy First:** No personal browsing data is stored. Analysis is performed on-the-fly via a secure REST API.
+- **📈 Scan History:** Keep track of your safety with a local history dashboard and visual safety scores.
 
-  📉 Enhanced with Shadow DOM UI and Typosquatting detection
+---
 
-  ⚡ FastAPI-based backend server for model inference
+## 🛠️ Tech Stack
 
-  🔗 REST API integration between extension and ML model
+- **Machine Learning:** XGBoost, Scikit-learn, Pandas (Feature Engineering)
+- **Backend:** Python, FastAPI, Uvicorn (REST API)
+- **Frontend:** JavaScript (Chrome Extension API V3), HTML5, CSS3
+- **DevOps/Tools:** Joblib, Render (Deployment), Git
 
-  🔐 Privacy-friendly (no user data is stored)
+---
 
-**📂 Project Structure**
-  📁 Frontend/ – Chrome extension frontend (HTML + JS)
-  📁 backend/ – Python backend with FastAPI and XGBoost model
+## 📂 Architecture
 
-app.py: API endpoints
+```text
+PhishShield/
+├── 📁 Frontend/          # Chrome Extension V3
+│   ├── background.js     # URL interception & ML API caller
+│   ├── manifest.json     # Extension configuration
+│   └── popup.js          # Security dashboard UI
+└── 📁 backend/           # ML Inference Server
+    ├── app.py            # FastAPI Application
+    ├── url_feature_extractor.py # 30+ Feature extraction logic
+    └── xgb_model.json    # Pre-trained XGBoost Model
+```
 
-url_feature_extractor.py: Feature engineering logic
+---
 
-best_xgb_model.pkl: Trained ML model
+## 🧪 How It Works
 
-📁 dataset/ – Phishing & legitimate URL dataset (for training)
+1. **Interception:** The extension monitors `webNavigation` events.
+2. **Feature Extraction:** 30+ features are extracted from the URL (length, special characters, prefix/suffix, etc.).
+3. **Inference:** Features are sent to the FastAPI backend hosted on Render.
+4. **Verdict:** The XGBoost model returns a probability score.
+5. **Enforcement:** If malicious, a high-visibility warning is injected into the page, allowing the user to exit safely.
 
-📁 notebook/ – Model training & evaluation notebooks
+---
 
-**🛠️ Technologies Used**
-  Machine Learning: XGBoost, Scikit-learn
+## ⚙️ Installation & Setup
 
-  Web: JavaScript, HTML, Chrome APIs
+### For Users
+1. **Download** this repository as a ZIP and extract it.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable **"Developer mode"** (top right toggle).
+4. Click **"Load unpacked"** and select the `Frontend` folder.
+5. **Pin PhishShield** to your toolbar for easy access!
 
-  Backend: Python, FastAPI
+### For Developers (Local Backend)
+1. Navigate to `backend/`.
+2. Install dependencies: `pip install -r requirements.txt`.
+3. Run the server: `python app.py`.
+4. Update the API URL in `Frontend/background.js` to `http://localhost:8000`.
 
-  Tools: Pandas, NumPy, Joblib
+---
 
-**🧪 How It Works**
-  The user visits a website.
+## 🎓 About the Developer
+**PhishShield** was developed by **Sanobar Shaikh** as part of a research initiative to bridge the gap between complex ML models and practical, user-centric cybersecurity tools.
 
-  The extension captures the URL and webpage data.
+---
 
-  Extracted features are sent to the FastAPI backend.
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-  The trained ML model predicts whether the URL is phishing or safe.
-
-  The result is displayed to the user in real-time.
-
-**🎓 Project Context**
-This extension is developed by **Sanobar Shaikh** as an implementation of a research project on phishing detection using machine learning. The goal is to build a practical, scalable solution for securing users against phishing attacks during regular browsing.
-
-📜 License
-This project is open-source and available under the MIT License.
-
-**If you want to use this just download it as a zip and then unzip it in your computer and enable the developer mode in chrome under the extension and load unpacked the Frontend Folder there pin it and you are ready to go**
-
+---
+*Disclaimer: No security tool is 100% foolproof. Always practice safe browsing habits.*
