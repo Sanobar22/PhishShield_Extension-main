@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "PhishShield - by Sanobar Shaikh",
+  "version": "1.1",
+  "description": "Advanced Phishing Detection powered by ML. Developed by Sanobar Shaikh.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "notifications",
+    "webNavigation"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
