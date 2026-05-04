@@ -87,13 +87,12 @@ PhishShield represents a paradigm shift in browser security, moving away from st
 I am passionate about the intersection of Machine Learning and Cybersecurity. If you're interested in my work, have suggestions, or want to collaborate on future security projects, let's connect!
 
 - **GitHub:** [@Sanobar22](https://github.com/Sanobar22)
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- **Email:** [Your Email Address]
+- **LinkedIn:** (https://www.linkedin.com/in/sanobar-shaikh-76574527b)
+- **Email:** [ssanobar732@gmail.com]
 
 ---
 
 <p align="center">
   <i>"Securing the web, one byte at a time."</i><br>
-  <b>Distributed under the MIT License.</b>
 </p>
 *Disclaimer: No security tool is 100% foolproof. Always practice safe browsing habits.*
