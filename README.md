@@ -73,13 +73,27 @@ PhishShield/
 
 ---
 
-## 🎓 About the Developer
-**PhishShield** was developed by **Sanobar Shaikh** as part of a research initiative to bridge the gap between complex ML models and practical, user-centric cybersecurity tools.
+## 🔬 Research & Innovation
+PhishShield represents a paradigm shift in browser security, moving away from static, reactive blacklists toward **proactive, AI-driven behavioral analysis**. Developed as a specialized research initiative by **Sanobar Shaikh**, this project bridges the gap between high-complexity Machine Learning models and practical, user-centric cybersecurity tools.
+
+### 🗺️ Future Roadmap
+- [ ] **Heuristic DOM Analysis:** Identifying deceptive UI elements and "fake" login forms in real-time.
+- [ ] **Multi-Model Ensemble:** Integrating CNNs (Convolutional Neural Networks) for visual phishing detection.
+- [ ] **Global Threat Intelligence:** Creating a decentralized peer-to-peer network for instant sharing of newly detected phishing nodes.
 
 ---
 
-## 📜 License
-Distributed under the MIT License. See `LICENSE` for more information.
+## 🤝 Connect & Collaborate
+I am passionate about the intersection of Machine Learning and Cybersecurity. If you're interested in my work, have suggestions, or want to collaborate on future security projects, let's connect!
+
+- **GitHub:** [@Sanobar22](https://github.com/Sanobar22)
+- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
+- **Email:** [Your Email Address]
 
 ---
+
+<p align="center">
+  <i>"Securing the web, one byte at a time."</i><br>
+  <b>Distributed under the MIT License.</b>
+</p>
 *Disclaimer: No security tool is 100% foolproof. Always practice safe browsing habits.*
